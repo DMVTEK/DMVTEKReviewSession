@@ -8,6 +8,5 @@ public class JavaDataTypes {
 
         System.out.println("Hellow World");
 
-
     }
 }
