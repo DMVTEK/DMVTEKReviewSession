@@ -16,7 +16,7 @@ public class JavaDataTypes {
 
         System.out.println("first line");
 
-        System.out.println("first line");
+        System.out.println("second line");
 
         System.out.println("first line");
 
