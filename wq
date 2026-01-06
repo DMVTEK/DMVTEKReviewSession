@@ -1,0 +1,67 @@
+*   [33mc4b7022[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32momidap[m[33m, [m[1;31morigin/omidap[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #13 from DMVTEK/Yasminath
+[31m|[m[32m\[m  
+[31m|[m * [33mede4df0[m First commit
+* [32m|[m   [33mb93d1d5[m Merge pull request #10 from DMVTEK/ShahidSafi
+[33m|[m[34m\[m [32m\[m  
+[33m|[m * [32m|[m [33m2f3e810[m This is my second code
+[33m|[m * [32m|[m [33m5ce2ad0[m This is my first code
+* [34m|[m [32m|[m   [33m17e3172[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #11 from DMVTEK/Angel
+[32m|[m[36m\[m [34m\[m [32m\[m  
+[32m|[m [36m|[m[32m_[m[34m|[m[32m/[m  
+[32m|[m[32m/[m[36m|[m [34m|[m   
+[32m|[m * [34m|[m [33me8516ca[m hello world
+[32m|[m * [34m|[m [33mddf29c4[m here is the message
+[32m|[m [34m|[m[34m/[m  
+* [34m|[m   [33m6d78976[m Merge pull request #12 from DMVTEK/Hamid002
+[1;31m|[m[1;32m\[m [34m\[m  
+[1;31m|[m * [34m|[m [33m9414f91[m[33m ([m[1;31morigin/Hamid002[m[33m)[m my new branh
+* [1;32m|[m [34m|[m [33mb774ef5[m initial modification
+[34m|[m [1;32m|[m[34m/[m  
+[34m|[m[34m/[m[1;32m|[m   
+* [1;32m|[m [33md7c9618[m Merge pull request #9 from DMVTEK/Hamid001
+[1;33m|[m[1;32m\[m[1;32m|[m 
+[1;33m|[m * [33m0144e2f[m[33m ([m[1;31morigin/Hamid001[m[33m)[m modified changes
+[1;33m|[m * [33m47a1c71[m my second code
+[1;33m|[m * [33m15fc706[m first code
+[1;33m|[m[1;33m/[m  
+* [33m41fe81e[m[33m ([m[1;31morigin/Sear_java[m[33m)[m Wednesday Practice code
+*   [33m6209b4f[m Merge pull request #7 from DMVTEK/Sear
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33mdec7047[m last week practice
+[1;35m|[m [1;36m|[m * [33m6149171[m[33m ([m[1;31morigin/naveed[m[33m)[m my first commit
+[1;35m|[m [1;36m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[1;36m|[m   
+[1;35m|[m [1;36m|[m *   [33m2709896[m[33m ([m[1;31morigin/javaCodeTest[m[33m)[m second commit
+[1;35m|[m [1;36m|[m [32m|[m[1;35m\[m  
+[1;35m|[m [1;36m|[m[1;35m_[m[32m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[1;36m|[m [32m|[m   
+[1;35m|[m [1;36m|[m * [33m24f57b7[m Update JavaDataTypes.java
+[1;35m|[m [1;36m|[m * [33m0080246[m adding a new branch:
+[1;35m|[m [1;36m|[m [33m|[m * [33mb0ee729[m[33m ([m[1;31morigin/Kamala[m[33m)[m first commit one
+[1;35m|[m [1;36m|[m[1;35m_[m[33m|[m[1;35m/[m  
+[1;35m|[m[1;35m/[m[1;36m|[m [33m|[m   
+* [1;36m|[m [33m|[m   [33m6a7b994[m Merge pull request #3 from DMVTEK/javaCodePractice
+[33m|[m[36m\[m [1;36m\[m [33m\[m  
+[33m|[m [36m|[m[33m_[m[1;36m|[m[33m/[m  
+[33m|[m[33m/[m[36m|[m [1;36m|[m   
+[33m|[m [36m|[m [1;36m|[m * [33m5272a10[m[33m ([m[1;31morigin/tester2[m[33m)[m excel sheet has been added
+[33m|[m [36m|[m [1;36m|[m * [33m5336f0b[m tester 2 first commit
+[33m|[m [36m|[m [1;36m|[m[36m/[m  
+[33m|[m [36m|[m[36m/[m[1;36m|[m   
+[33m|[m * [1;36m|[m [33m53bf5a6[m[33m ([m[1;31morigin/javaCodePractice[m[33m)[m first changes
+[33m|[m[33m/[m [1;36m/[m  
+* [1;36m|[m   [33m3bbbc72[m Merge pull request #2 from DMVTEK/NewBranch
+[1;32m|[m[1;33m\[m [1;36m\[m  
+[1;32m|[m * [1;36m|[m [33m336b663[m This is my first commit
+[1;32m|[m * [1;36m|[m [33m431e439[m This is our today's branch
+[1;32m|[m [1;36m|[m[1;36m/[m  
+[1;32m|[m * [33m98a6252[m First Commit
+[1;32m|[m[1;32m/[m  
+*   [33m50b68bf[m Merge pull request #1 from DMVTEK/Seyar_java
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33m2516fad[m code fix
+[1;34m|[m[1;34m/[m  
+* [33m21723a1[m asdfasdf
+* [33m4b8a142[m first practice commit
+* [33md013837[m second commit
+* [33mb2fd60c[m first commit
