@@ -5,6 +5,7 @@ UI-FUNC-001: Verify home page loads successfully
 Page should load without errors
 
 Page title should be displayed correctly
+expected title : ""
 
 Main container should be visible
 
