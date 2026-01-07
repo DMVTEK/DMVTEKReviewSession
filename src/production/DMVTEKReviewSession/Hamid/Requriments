@@ -1,0 +1,146 @@
+1️⃣ Page Load & Core UI
+
+UI-FUNC-001: Verify home page loads successfully
+
+Page should load without errors
+
+Page title should be displayed correctly
+
+Main container should be visible
+
+🔧 Automation:
+
+Assert page title
+
+Assert main container visibility
+
+2️⃣ Category Cards Visibility
+
+UI-FUNC-002: Verify all main category cards are visible
+
+Elements
+
+Forms
+
+Alerts, Frame & Windows
+
+Widgets
+
+Interactions
+
+Book Store Application
+
+🔧 Automation:
+
+Locate all cards
+
+Assert count = 6
+
+Assert text is correct
+
+3️⃣ Category Cards Click Functionality
+
+UI-FUNC-003: Verify clicking “Elements” card navigates correctly
+
+User should be redirected to Elements page
+
+URL should contain /elements
+
+🔧 Automation:
+
+Click Elements card
+
+Assert URL contains /elements
+
+UI-FUNC-004: Verify clicking “Forms” card navigates correctly
+
+User should be redirected to Forms page
+
+🔧 Automation:
+
+Click Forms card
+
+Assert page header text
+
+UI-FUNC-005: Verify clicking “Widgets” card navigates correctly
+
+🔧 Automation:
+
+Click Widgets card
+
+Assert URL or page header
+
+4️⃣ Navigation Behavior
+
+UI-FUNC-006: Verify browser back navigation
+
+User should return to home page after clicking back
+
+🔧 Automation:
+
+Navigate back
+
+Assert home page is displayed
+
+5️⃣ Header Logo Functionality
+
+UI-FUNC-007: Verify DemoQA logo is visible
+
+Logo should be displayed on page
+
+🔧 Automation:
+
+Assert logo element is displayed
+
+UI-FUNC-008: Verify clicking DemoQA logo redirects to home page
+
+🔧 Automation:
+
+Click logo
+
+Assert URL equals home page
+
+6️⃣ UI Text & Labels Validation
+
+UI-FUNC-009: Verify category card labels text
+
+Text should match expected values
+
+No spelling issues
+
+🔧 Automation:
+
+Assert text using getText()
+
+7️⃣ Page Scroll & Layout
+
+UI-FUNC-010: Verify page scroll works correctly
+
+User should be able to scroll down and up
+
+🔧 Automation:
+
+Use JavaScript scroll
+
+Assert element visibility after scroll
+
+8️⃣ Click Stability (UI Functional)
+
+UI-FUNC-011: Verify cards are clickable without multiple clicks
+
+Single click should be sufficient
+
+🔧 Automation:
+
+Click once
+
+Assert navigation success
+
+🔗 Automation Mapping (Selenium)
+Requirement	Selenium Action
+UI-FUNC-001	driver.get(), getTitle()
+UI-FUNC-002	findElements()
+UI-FUNC-003–005	click(), getCurrentUrl()
+UI-FUNC-006	navigate().back()
+UI-FUNC-007–008	isDisplayed(), click()
+UI-FUNC-010	JavascriptExecutor
