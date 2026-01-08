@@ -53,4 +53,20 @@ public class Requrements {
         Assert.assertTrue(bookStoreApplicationButton.isDisplayed());
 
     }
+
+    @Test
+    public void req003() {
+        WebElement elementButton = driver.findElement(By.xpath("//h5[text()='Elements']"));
+        elementButton.click();
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("Current url is:      " + currentURL);
+        boolean result = false;
+        if (currentURL.contains("elements")){
+            result = true;
+        }else {
+            result = false;
+        }
+        Assert.assertTrue(result);
+    }
+
 }
