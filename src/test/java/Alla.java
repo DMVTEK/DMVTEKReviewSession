@@ -34,4 +34,21 @@ public class Alla {
         Assert.assertTrue(elementButton.isDisplayed());
         Assert.assertTrue(alertFrameWindowButton.isDisplayed());
     }
+
+    @Test
+    public void req002() {
+        WebElement elementButton = driver.findElement(By.xpath("//h5[text()='Elements']"));
+        WebElement formsButton = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        WebElement alertFrameWindowButton = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+        WebElement widgetsButton = driver.findElement(By.xpath("//h5[text()='Widgets']"));
+        WebElement interactionsButton = driver.findElement(By.xpath("//h5[text()='Interactions']"));
+        WebElement bookStoreApplicationButton = driver.findElement(By.xpath("//h5[text()='Book Store Application']"));
+
+        Assert.assertTrue(elementButton.isDisplayed());
+        Assert.assertTrue(formsButton.isDisplayed());
+        Assert.assertTrue(alertFrameWindowButton.isDisplayed());
+        Assert.assertTrue(widgetsButton.isDisplayed());
+        Assert.assertTrue(interactionsButton.isDisplayed());
+        Assert.assertTrue(bookStoreApplicationButton.isDisplayed());
+    }
 }
