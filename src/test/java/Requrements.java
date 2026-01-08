@@ -14,7 +14,6 @@ public class Requrements {
 
      WebDriver driver;
 
-
     @BeforeMethod
     public void setUp() {
         driver = new ChromeDriver();
@@ -64,7 +63,6 @@ public class Requrements {
 
         Assert.assertTrue(elementButton.isDisplayed());
         Assert.assertTrue(alertFrameWindowButton.isDisplayed());
-
     }
 
     @Test
@@ -83,4 +81,38 @@ public class Requrements {
         Assert.assertTrue(bookStoreApplicationButton.isDisplayed());
 
     }
+
+    @Test
+    public void req003() {
+        WebElement elementButton = driver.findElement(By.xpath("//h5[text()='Elements']"));
+        elementButton.click();
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("Current url is:      " + currentURL);
+        boolean result = false;
+        if (currentURL.contains("elements")){
+            result = true;
+        }else {
+            result = false;
+        }
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void req004() {
+
+        WebElement formsButton = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        formsButton.click();
+        String expectedHeader = "Please select an item from left to start practice.";
+        String formHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']")).getText();
+        Assert.assertEquals(formHeader, expectedHeader );
+
+        WebElement practiceFormLink = driver.findElement(By.xpath("//span[text()='Practice Form']"));
+        practiceFormLink.click();
+
+        String expectedHeader2 = "Practice Form";
+        WebElement practiceFormHeader = driver.findElement(By.xpath("//h1[text()='Practice Form']"));
+        String actualPracticeFormHeader = practiceFormLink.getText();
+        Assert.assertEquals(actualPracticeFormHeader, expectedHeader2);
+    }
+
 }
