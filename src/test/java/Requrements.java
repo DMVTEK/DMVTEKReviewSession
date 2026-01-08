@@ -18,6 +18,9 @@ public class Requrements {
     public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/");
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
     @AfterMethod
@@ -113,6 +116,28 @@ public class Requrements {
         WebElement practiceFormHeader = driver.findElement(By.xpath("//h1[text()='Practice Form']"));
         String actualPracticeFormHeader = practiceFormLink.getText();
         Assert.assertEquals(actualPracticeFormHeader, expectedHeader2);
+    }
+
+    @Test
+    public void req005() {
+
+        WebElement WidgetsButton = driver.findElement(By.xpath("//h5[text()='Widgets']"));
+        WidgetsButton.click();
+
+        WebElement practiceFormLink = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']"));
+        String expectedWidgetHeader = practiceFormLink.getText();
+        String actualWidgetHeader = practiceFormLink.getText();
+        Assert.assertEquals(actualWidgetHeader, expectedWidgetHeader);
+
+        WebElement accordianButton = driver.findElement(By.xpath("//span[text()='Accordian']"));
+        accordianButton.click();
+        WebElement accordianHeader = driver.findElement(By.xpath("//h1[text()='Accordian']"));
+
+        String expectedAccordianHeader = "Accordian";
+        String actualAccordianHeader = accordianHeader.getText();
+        Assert.assertEquals(actualAccordianHeader, expectedAccordianHeader);
+
+
     }
 
 }
