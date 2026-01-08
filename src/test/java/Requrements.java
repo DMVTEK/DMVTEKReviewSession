@@ -7,6 +7,7 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 
@@ -88,7 +89,7 @@ public class Requrements {
     @Test
     public void req003() {
         WebElement elementButton = driver.findElement(By.xpath("//h5[text()='Elements']"));
-        elementButton.click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", elementButton);
         String currentURL = driver.getCurrentUrl();
         System.out.println("Current url is:      " + currentURL);
         boolean result = false;
@@ -104,7 +105,7 @@ public class Requrements {
     public void req004() {
 
         WebElement formsButton = driver.findElement(By.xpath("//h5[text()='Forms']"));
-        formsButton.click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", formsButton);
         String expectedHeader = "Please select an item from left to start practice.";
         String formHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']")).getText();
         Assert.assertEquals(formHeader, expectedHeader );
@@ -122,7 +123,7 @@ public class Requrements {
     public void req005() {
 
         WebElement WidgetsButton = driver.findElement(By.xpath("//h5[text()='Widgets']"));
-        WidgetsButton.click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", WidgetsButton);
 
         WebElement practiceFormLink = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']"));
         String expectedWidgetHeader = practiceFormLink.getText();
@@ -130,7 +131,7 @@ public class Requrements {
         Assert.assertEquals(actualWidgetHeader, expectedWidgetHeader);
 
         WebElement accordianButton = driver.findElement(By.xpath("//span[text()='Accordian']"));
-        accordianButton.click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click();", accordianButton);
         WebElement accordianHeader = driver.findElement(By.xpath("//h1[text()='Accordian']"));
 
         String expectedAccordianHeader = "Accordian";
