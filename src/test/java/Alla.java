@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.time.Duration;
+
 
 public class Alla {
 
@@ -14,6 +16,9 @@ public class Alla {
     public void setUP() {
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/");
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
     @AfterMethod
@@ -82,5 +87,22 @@ public class Alla {
         WebElement practiceFormHeader = driver.findElement(By.xpath("//h1[text()='Practice Form']"));
         String actualPracticeFormHeader = practiceFormHeader.getText();
         Assert.assertEquals(actualPracticeFormHeader, expectedHeader2);
+    }
+
+    @Test
+    public void req005() {
+        WebElement widgetsButton = driver.findElement(By.xpath("//h5[text()='Widgets']"));
+        widgetsButton.click();
+        String expectedHeader = "Please select an item from left to start practice.";
+        String formHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']")).getText();
+        Assert.assertEquals(formHeader, expectedHeader);
+
+        WebElement accordianLink = driver.findElement(By.xpath("//span[text()='Accordian']"));
+        accordianLink.click();
+
+        String expectedHeader2 = "Accordian";
+        WebElement accordianHeader = driver.findElement(By.xpath("//h1[text()='Accordian']"));
+        String actualAccordianHeader = accordianHeader.getText();
+        Assert.assertEquals(actualAccordianHeader, expectedHeader2);
     }
 }
