@@ -164,5 +164,11 @@ public class Requrements {
 
     }
 
+    @Test
+    public void req007() {
+        WebElement logo =  driver.findElement(By.xpath("//img[@src='/images/Toolsqa.jpg']"));
+        Assert.assertTrue(logo.isDisplayed());
+    }
+
 
 }
