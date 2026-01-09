@@ -9,11 +9,9 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
-
-
 public class Requrements {
 
-     WebDriver driver;
+    WebDriver driver;
 
     @BeforeMethod
     public void setUp() {
@@ -23,6 +21,7 @@ public class Requrements {
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
+
 
     @AfterMethod
     public void tearDown() {
@@ -93,9 +92,9 @@ public class Requrements {
         String currentURL = driver.getCurrentUrl();
         System.out.println("Current url is:      " + currentURL);
         boolean result = false;
-        if (currentURL.contains("elements")){
+        if (currentURL.contains("elements")) {
             result = true;
-        }else {
+        } else {
             result = false;
         }
         Assert.assertTrue(result);
@@ -109,7 +108,7 @@ public class Requrements {
         ((JavascriptExecutor)driver).executeScript("arguments[0].click()", formsButton);
         String expectedHeader = "Please select an item from left to start practice.";
         String formHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']")).getText();
-        Assert.assertEquals(formHeader, expectedHeader );
+        Assert.assertEquals(formHeader, expectedHeader);
 
         WebElement practiceFormLink = driver.findElement(By.xpath("//span[text()='Practice Form']"));
         practiceFormLink.click();
@@ -144,6 +143,24 @@ public class Requrements {
 
     @Test
     public void req006() {
+
+        WebElement formsButton = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        formsButton.click();
+
+        String expectedRrl = "forms";
+        String actualUrl = driver.getCurrentUrl();
+        boolean result = false;
+        if (actualUrl.contains(expectedRrl)) {
+            result = true;
+        } else {
+            result = false;
+        }
+        Assert.assertTrue(result);
+        driver.navigate().back();
+
+        WebElement seleniumImage = driver.findElement(By.xpath("//img[@class='banner-image']"));
+        boolean imageIsPresent = seleniumImage.isDisplayed();
+        Assert.assertTrue(imageIsPresent);
 
     }
 
