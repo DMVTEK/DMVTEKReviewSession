@@ -22,6 +22,7 @@ public class Requrements {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
+
     @AfterMethod
     public void tearDown() {
         try {
