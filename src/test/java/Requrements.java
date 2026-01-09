@@ -170,5 +170,19 @@ public class Requrements {
         Assert.assertTrue(logo.isDisplayed());
     }
 
+    @Test
+    public void req008() throws InterruptedException {
+
+        WebElement interactionsButton = driver.findElement(By.xpath("//h5[text()='Interactions']"));
+        interactionsButton.click();
+
+        WebElement intractionsHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']"));
+        Assert.assertTrue(intractionsHeader.isDisplayed());
+        WebElement logo =  driver.findElement(By.xpath("//img[@src='/images/Toolsqa.jpg']"));
+        logo.click();
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertEquals(actualUrl, "https://demoqa.com/");
+
+    }
 
 }
