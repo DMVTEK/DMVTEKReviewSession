@@ -2,7 +2,7 @@
 <suite name="MyTestSuite">
     <test name="Test">
         <classes>
-            <class name="Omid"/>
+            <class name="Requrements"/>
         </classes>
     </test>
 </suite>
