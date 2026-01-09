@@ -101,6 +101,7 @@ public class Requrements {
         Assert.assertTrue(result);
     }
 
+
     @Test
     public void req004() {
 
@@ -140,5 +141,11 @@ public class Requrements {
 
 
     }
+
+    @Test
+    public void req006() {
+
+    }
+
 
 }
