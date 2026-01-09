@@ -12,6 +12,7 @@ out/
 .springBeans
 .sts4-cache
 .png
+target/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
