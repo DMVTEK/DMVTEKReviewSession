@@ -105,4 +105,26 @@ public class Alla {
         String actualAccordianHeader = accordianHeader.getText();
         Assert.assertEquals(actualAccordianHeader, expectedHeader2);
     }
+
+    @Test
+    public void req006() {
+        WebElement formsButton = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        formsButton.click();
+
+        String expectedURL = "https://demoqa.com/forms";
+        String actualURL = driver.getCurrentUrl();
+        Assert.assertEquals(expectedURL, actualURL);
+
+        driver.navigate().back();
+
+        WebElement seleniumImage = driver.findElement(By.xpath("//img[@class='banner-image']"));
+        boolean imageIsPresent = seleniumImage.isDisplayed();
+        Assert.assertTrue(imageIsPresent);
+    }
+
+    @Test
+    public void req007() {
+        WebElement logo =driver.findElement(By.xpath("//img[@src='/images/Toolsqa.jpg']"));
+        Assert.assertTrue(logo.isDisplayed());
+    }
 }
