@@ -1,11 +1,14 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 
 public class Alla {
@@ -13,7 +16,7 @@ public class Alla {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUP() {
+    public void setUp() {
         driver = new ChromeDriver();
         driver.get("https://demoqa.com/");
         driver.manage().window().maximize();
@@ -21,10 +24,36 @@ public class Alla {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
+
     @AfterMethod
     public void tearDown() {
-        driver.close();
-        driver.quit();
+        try {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File source = ts.getScreenshotAs(OutputType.FILE);
+
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String destination = System.getProperty("user.dir")
+                    + File.separator
+                    + "src"
+                    + File.separator
+                    + "test"
+                    + File.separator
+                    + "screenshot"
+                    + File.separator
+                    + "loginPage_"
+                    + timestamp + ".png";
+
+            File destFile = new File(destination);
+            destFile.getParentFile().mkdirs(); // ensure folders exist
+            FileUtils.copyFile(source, destFile);
+
+            System.out.println("Screenshot saved at: " + destination);
+        } catch (IOException e) {
+            System.out.println("Failed to capture screenshot: " + e.getMessage());
+        } finally {
+            if (driver != null)
+                driver.quit();
+        }
     }
 
     @Test
@@ -126,5 +155,19 @@ public class Alla {
     public void req007() {
         WebElement logo =driver.findElement(By.xpath("//img[@src='/images/Toolsqa.jpg']"));
         Assert.assertTrue(logo.isDisplayed());
+    }
+
+    @Test
+    public void req008() throws InterruptedException {
+
+        WebElement interactionsButton = driver.findElement(By.xpath("//h5[text()='Interactions']"));
+        interactionsButton.click();
+
+        WebElement intractionsHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']"));
+        Assert.assertTrue(intractionsHeader.isDisplayed());
+        WebElement logo =  driver.findElement(By.xpath("//img[@src='/images/Toolsqa.jpg']"));
+        logo.click();
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertEquals(actualUrl, "https://demoqa.com/");
     }
 }
