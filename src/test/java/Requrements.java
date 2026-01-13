@@ -145,7 +145,7 @@ public class Requrements {
     public void req006() {
 
         WebElement formsButton = driver.findElement(By.xpath("//h5[text()='Forms']"));
-        formsButton.click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click()", formsButton);
 
         String expectedRrl = "forms";
         String actualUrl = driver.getCurrentUrl();
@@ -174,7 +174,7 @@ public class Requrements {
     public void req008() throws InterruptedException {
 
         WebElement interactionsButton = driver.findElement(By.xpath("//h5[text()='Interactions']"));
-        interactionsButton.click();
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click()",interactionsButton);
 
         WebElement intractionsHeader = driver.findElement(By.xpath("//div[text()='Please select an item from left to start practice.']"));
         Assert.assertTrue(intractionsHeader.isDisplayed());
